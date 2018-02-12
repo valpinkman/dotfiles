@@ -1,7 +1,7 @@
 [user]
   name = valpinkman
   email = design.valentin@gmail.com
-  # signingkey = 9FFB8D3E
+  signingkey = 9FFB8D3E
 [github]
   user = valpinkman
 [color]
@@ -96,6 +96,6 @@
   eol = lf
   precomposeunicode = true    # Sur mac uniquement, pour régler les problèmes d'accents (re-cloner si vieux projet)
 [commit]
-	# gpgsign = true
+	gpgsign = true
 [gpg]
-	# program = /usr/local/bin/gpg2
+	program = /usr/local/bin/gpg

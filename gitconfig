@@ -1,0 +1,101 @@
+[user]
+  name = valpinkman
+  email = design.valentin@gmail.com
+  # signingkey = 9FFB8D3E
+[github]
+  user = valpinkman
+[color]
+  diff = true
+  status = auto
+  branch = always
+  interactive = always
+  ui = always
+  pager = true
+  filemode = false
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[credential]
+  helper = osxkeychain
+[alias]
+  st = status
+  ci = commit
+  oops = commit --amend -C HEAD
+  br = branch
+  co = checkout
+  sh = stash save -u
+  shp = stash pop --index
+  df = diff
+  dfs = diff --staged
+  dfw = diff --word-diff
+  dfo = diff --name-only
+  lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+  lgg = log -20 --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+  lp = log -p
+  lt = log --topo-order
+  gl = log --graph
+  glt = log --pretty=format:'%h : %s' --topo-order --graph
+  sb = show-branch
+  up = pull --rebase
+  wu = log --stat origin..@{0}
+  wup = log -p origin..@{0}
+  me = merge --no-ff
+  hard = reset --hard
+  contributors = shortlog --summary --numbered                                # List contributors with number of commits
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"      # Remove branches that have already been merged with master
+[branch]
+  #mergeoptions = --no-ff     	# Ne pas décommenter, préférer l'alias 'git me' qui utilise le --no-ff,
+                                # et conserver l'utilisation de 'git merge' par défaut pour les situations qui requièrent le fast-forward
+  autosetuprebase = never
+[grep]
+  extendedRegexp = true
+[log]
+  abbrevCommit = true
+[diff]
+  mnemonicPrefix = true
+  wordRegex = .
+[fetch]
+  recurseSubmodules = on-demand
+[pull]
+  #rebase = true      	# Ne pas décommenter, préférer l'alias 'git up' qui fait un 'git pull --rebase",
+                        # et garder la commande 'git pull' par défaut pour les situations sans rebase (merge par exemple)
+[push]
+  default = upstream
+[rerere]
+  # If, like me, you like rerere, decomment these
+  autoupdate = true
+  enabled = true
+[status]
+  submoduleSummary = true
+  showUntrackedFiles = all
+[merge]
+  conflictStyle = diff3
+  log = true                # Include summaries of merged commits in newly created merge commit messages
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+  prompt = false
+[tag]
+  sort = version:refname
+[core]
+  #editor = atom --wait
+  editor = vim
+  #pager = cat                # Outil de "pagination" de votre choix (cat -> pas de pagination)
+  autocrlf = input            # sous windows mettre true au lieu de input
+  whitespace = "trailing-space,space-before-tab,-indent-with-non-tab,-cr-at-eol,fix"
+  eol = lf
+  precomposeunicode = true    # Sur mac uniquement, pour régler les problèmes d'accents (re-cloner si vieux projet)
+[commit]
+	# gpgsign = true
+[gpg]
+	# program = /usr/local/bin/gpg2

@@ -96,6 +96,6 @@
   eol = lf
   precomposeunicode = true    # Sur mac uniquement, pour régler les problèmes d'accents (re-cloner si vieux projet)
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = /usr/local/bin/gpg

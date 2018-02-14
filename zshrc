@@ -14,6 +14,7 @@ PATH=$PATH:/bin
 export PATH
 export NVM_DIR=~/.nvm
 export ZSH=$HOME/.oh-my-zsh
+export GPG_TTY=$(tty)
 
 [ -s "$HOME/nvm.sh" ] && . "$HOME/nvm.sh"  # This loads nvm
 

@@ -32,6 +32,7 @@ source ~/.bash_profile
 antigen use oh-my-zsh
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle paulirish/git-open
 antigen apply
 
 # unsetopt correct_all

@@ -95,6 +95,7 @@
   whitespace = "trailing-space,space-before-tab,-indent-with-non-tab,-cr-at-eol,fix"
   eol = lf
   precomposeunicode = true    # Sur mac uniquement, pour régler les problèmes d'accents (re-cloner si vieux projet)
+  ignorecase = false
 [commit]
 	gpgsign = true
 [gpg]

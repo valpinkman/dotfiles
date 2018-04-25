@@ -1,4 +1,4 @@
-ZSH_THEME=""
+# ZSH_THEME=""
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -20,12 +20,16 @@ export GPG_TTY=$(tty)
 
 [ -s "$HOME/nvm.sh" ] && . "$HOME/nvm.sh"  # This loads nvm
 
+# fzf
+
+export FZF_DEFAULT_COMMAND='rg --files --follow'
+export FZF_CTRL_T_COMMAND='rg --files --follow 2>/dev/null'
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 
 source $(brew --prefix nvm)/nvm.sh
 source ~/dotfiles/antigen.zsh
-# source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
 source ~/.bash_profile
 
@@ -33,6 +37,8 @@ antigen use oh-my-zsh
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle paulirish/git-open
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 antigen apply
 
 # unsetopt correct_all

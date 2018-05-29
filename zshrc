@@ -22,8 +22,8 @@ export GPG_TTY=$(tty)
 
 # fzf
 
-export FZF_DEFAULT_COMMAND='rg --files --follow'
-export FZF_CTRL_T_COMMAND='rg --files --follow 2>/dev/null'
+# export FZF_DEFAULT_COMMAND='rg --files --follow'
+# export FZF_CTRL_T_COMMAND='rg --files --follow 2>/dev/null'
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/"

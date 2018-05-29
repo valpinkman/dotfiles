@@ -1,4 +1,4 @@
-alias p='cd ~/Documents/Projects/'
+alias p='cd ~/Projects/'
 alias sourcezsh='source ~/.zshrc'
 alias dot='cd ~/dotfiles'
 

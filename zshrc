@@ -26,12 +26,10 @@ export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/"
 
 source $(brew --prefix nvm)/nvm.sh
-source ~/dotfiles/antigen.zsh
+source ~/antigen.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 source ~/.profile
-
-eval "$(pipenv --completion)"
 
 antigen use oh-my-zsh
 antigen bundle zdharma/fast-syntax-highlighting
@@ -40,6 +38,8 @@ antigen bundle paulirish/git-open
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 antigen apply
+
+eval "$(pipenv --completion)"
 
 unsetopt correct_all
 setopt correct

@@ -1,6 +1,6 @@
 [user]
-  name = Valentin D. Pinkman
-  email = valentin.d.pinkman@icloud.com
+	name = Valentin D. Pinkman
+	email = valentin.d.pinkman@icloud.com
   signingkey = 9FFB8D3E
 [github]
   user = valpinkman
@@ -53,6 +53,12 @@
   hard = reset --hard
   contributors = shortlog --summary --numbered                                # List contributors with number of commits
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"      # Remove branches that have already been merged with master
+	switch = !legit switch
+	sync = !legit sync
+	publish = !legit publish
+	unpublish = !legit unpublish
+	undo = !legit undo
+	branches = !legit branches
 [branch]
   #mergeoptions = --no-ff     	# Ne pas décommenter, préférer l'alias 'git me' qui utilise le --no-ff,
                                 # et conserver l'utilisation de 'git merge' par défaut pour les situations qui requièrent le fast-forward
@@ -100,3 +106,8 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

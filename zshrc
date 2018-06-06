@@ -26,7 +26,7 @@ export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/"
 
 source $(brew --prefix nvm)/nvm.sh
-source ~/antigen.zsh
+source ~/dotfiles/antigen.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 source ~/.profile

@@ -45,16 +45,25 @@ echo "Cleaning up brew"
 brew cleanup
 echo "done"
 
+echo "Setting ZSH as shell..."
+chsh -s /bin/zsh
+
 apps=(
+    astro
+    dashlane
     github
     gpg-suite
+    google-chrome
     iterm2
     keybase
     kid3
     postman
+    setapp
     spectacle
+    station
     visual-studio-code
     vox
+    vox-preferences-pane
     qlcolorcode
     qlimagesize
     qlmarkdown

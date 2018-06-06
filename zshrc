@@ -43,6 +43,3 @@ eval "$(pipenv --completion)"
 
 unsetopt correct_all
 setopt correct
-
-autoload -U promptinit; promptinit
-prompt pure

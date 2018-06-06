@@ -33,6 +33,7 @@ echo "Installing brew git utilities..."
 brew install git-extras
 brew install legit
 brew install hub
+brew install tig
 
 echo "Installing other brew stuff..."
 brew install nvm

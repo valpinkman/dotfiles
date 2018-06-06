@@ -114,5 +114,3 @@ ln -s $dir/config $ssh/config
 echo "done"
 
 killall Finder
-
-source ~/.zshrc

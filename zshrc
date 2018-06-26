@@ -39,7 +39,5 @@ antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 antigen apply
 
-eval "$(pipenv --completion)"
-
 unsetopt correct_all
 setopt correct

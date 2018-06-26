@@ -58,6 +58,7 @@ apps=(
     iterm2
     keybase
     kid3
+    now
     postman
     setapp
     spectacle

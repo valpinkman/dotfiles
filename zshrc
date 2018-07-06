@@ -14,6 +14,7 @@ PATH=$PATH:/sbin
 PATH=$PATH:/bin
 
 export PATH
+export JOBS=max
 export NVM_DIR=~/.nvm
 export ZSH=$HOME/.oh-my-zsh
 export GPG_TTY=$(tty)

@@ -6,7 +6,9 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 ssh=~/.ssh                        # ssh directory
+bin=~/.bin                        # user bin directory
 files="bash_aliases bash_profile gemrc gitconfig gitignore profile vimrc zshrc"    # list of files/folders to symlink in homedir
+scripts="c"
 
 echo "Installing antigen"
 curl -L git.io/antigen > $dir/antigen.zsh
@@ -41,6 +43,8 @@ brew install python
 brew install python@2
 brew install pipenv
 brew install yarn
+brew install fzf
+brew install ripgrep
 
 echo "Cleaning up brew"
 brew cleanup
@@ -114,5 +118,15 @@ echo "done"
 echo "Linking ssh config"
 ln -s $dir/config $ssh/config
 echo "done"
+
+echo "Creating $bin if it doesn't exist already"
+mkdir -p $bin
+echo "done"
+
+for script in $scripts; do
+    echo "Creating symlink to $bin"
+    ln -s $dir/bin/$script $bin/$script
+done
+
 
 killall Finder

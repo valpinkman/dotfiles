@@ -6,6 +6,8 @@ EDITOR="code"
 
 # User configuration
 PATH=$PATH
+PATH=$PATH:/usr/local/opt/python/libexec/bin
+PATH=$PATH:~/.bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/sbin
@@ -20,6 +22,11 @@ export ZSH=$HOME/.oh-my-zsh
 export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export HOMEBREW_GITHUB_API_TOKEN="431466e0467724fab836e2027ab2ff38f488461f"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -s "$HOME/nvm.sh" ] && . "$HOME/nvm.sh"  # This loads nvm
 

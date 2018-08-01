@@ -34,9 +34,9 @@ echo "Cleaning up..."
 brew cleanup
 echo "done"
 
-# echo "Setting ZSH as shell..."
-# chsh -s /bin/zsh
-# echo "done"
+echo "Setting ZSH as shell..."
+chsh -s /bin/zsh
+echo "done"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

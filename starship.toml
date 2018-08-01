@@ -1,13 +1,43 @@
 # https://www.nerdfonts.com/cheat-sheet
 
+format = """\
+    $username\
+    $hostname\
+    $directory\
+    $package\
+    $java\
+    $nodejs\
+    $ruby\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_status\
+    $rust\
+    $terraform\
+    $nix_shell\
+    $conda\
+    $memory_usage\
+    $aws\
+    $env_var\
+    $crystal\
+    $cmd_duration\
+    $line_break\
+    $jobs\
+    $battery\
+    $time\
+    $character\
+"""
+
 [character]
 # symbol = "[λ]"
 # symbol = "[]" # lightning symbol
 # symbol = "[]" # flask symbol
 # symbol = "[]" # serynge symbol
 # symbol = "[]" # chilli symbol
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
+success_symbol = "[λ](bold green)"
+# success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+# error_symbol = "[](bold red)"
 
 [nodejs]
 symbol = " "

@@ -5,6 +5,15 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 EDITOR="code"
 
+export ANDROID_AVD_HOME=~/.android/avd
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export GPG_TTY=$(tty)
+export JAVA_HOME=`/usr/libexec/java_home`
+export JOBS=max
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PNPM_HOME="/Users/valentin.dealmeida/Library/pnpm"
+
 # User configuration
 
 export JOBS=max
@@ -13,8 +22,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export JAVA_HOME=`/usr/libexec/java_home`
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_SDK_ROOT=~/Library/Android/sdk
-export ANDROID_AVD_HOME=~/.android/avd
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_AVD_HOME=$HOME/.android/avd
 
 PATH=$PATH
 PATH=$PATH:/usr/local/sbin
@@ -30,7 +39,6 @@ PATH=$PATH:$ANDROID_HOME/platform-tools
 PATH=$VOLTA_HOME/bin:$PATH
 
 export PATH
-
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 

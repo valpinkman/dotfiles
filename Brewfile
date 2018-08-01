@@ -1,6 +1,7 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
 
@@ -49,8 +50,6 @@ cask "steam"
 cask "setapp"
 cask "via"
 cask "visual-studio-code"
-cask "vox"
-cask "vox-preferences-pane"
 cask "webtorrent"
 cask "zulu11"
 

@@ -8,3 +8,15 @@ Host github.com
   HostName github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_ed25519
+
+Host 10.252.*
+    User ec2-user
+    StrictHostKeyChecking no
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyCommand ssh -i ~/.ssh/id_ed25519 vpinkman@bastion.aws.prd.ldg-tech.com -W %h:22
+# Prod Bastion
+Host bastion.aws.prd.ldg-tech.com
+    Hostname bastion.aws.prd.ldg-tech.com
+    User vpinkman
+    StrictHostKeyChecking no
+    IdentityFile ~/.ssh/id_ed25519

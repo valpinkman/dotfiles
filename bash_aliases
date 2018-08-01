@@ -1,6 +1,5 @@
-alias p='cd ~/Projects/'
-alias manager='cd ~/Projects/manager'
-alias live='cd ~/Projects/live'
+alias p='cd ~/projects/'
+alias live='cd ~/projects/live'
 alias sourcezsh='source ~/.zshrc'
 alias dot='cd ~/dotfiles'
 alias psgrep='ps aux | grep -v grep | grep -i '
@@ -157,4 +156,7 @@ function d () {
     dirs -v | head -10
   fi
 }
-compdef _dirs d
+# compdef _dirs d
+
+alias python="/opt/homebrew/bin/python3"
+alias pip="/usr/local/bin/pip3"

@@ -73,8 +73,8 @@
   default = upstream
 [rerere]
   # If, like me, you like rerere, decomment these
-  autoupdate = true
-  enabled = true
+  # autoupdate = true
+  # enabled = true
 [status]
   submoduleSummary = true
   showUntrackedFiles = all
@@ -88,7 +88,6 @@
 [tag]
   sort = version:refname
 [core]
-  #editor = atom --wait
   editor = vim
   #pager = cat                # Outil de "pagination" de votre choix (cat -> pas de pagination)
   autocrlf = input            # sous windows mettre true au lieu de input
@@ -106,7 +105,11 @@
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
-[hub]
-	protocol = ssh
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential

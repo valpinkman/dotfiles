@@ -11,6 +11,10 @@ PATH=$PATH:/usr/sbin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/bin
+PATH=$PATH:$ANDROID_HOME/emulator
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH
 export JOBS=max
@@ -18,7 +22,7 @@ export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 

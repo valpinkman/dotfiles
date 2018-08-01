@@ -102,6 +102,7 @@
   eol = lf
   precomposeunicode = true    # Sur mac uniquement, pour régler les problèmes d'accents (re-cloner si vieux projet)
   ignorecase = false
+  excludesfile = ~/.gitignore
 [commit]
 	gpgsign = true
 [gpg]

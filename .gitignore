@@ -1,1 +1,7 @@
 antigen.zsh
+*.log
+.DS_Store
+.vscode
+.vs
+thumbs.db
+jsconfig.json

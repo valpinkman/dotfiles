@@ -6,7 +6,6 @@ EDITOR="code"
 
 # User configuration
 PATH=$PATH
-PATH=$PATH:/usr/local/opt/python/libexec/bin
 PATH=$PATH:~/.bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/bin

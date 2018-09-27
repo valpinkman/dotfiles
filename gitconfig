@@ -7,9 +7,9 @@
 [color]
   diff = true
   status = auto
-  branch = always
+  branch = auto
   interactive = always
-  ui = always
+  ui = true
   pager = true
   filemode = false
 [color "branch"]

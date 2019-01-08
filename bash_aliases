@@ -2,6 +2,8 @@ alias p='cd ~/Projects/'
 alias sourcezsh='source ~/.zshrc'
 alias dot='cd ~/dotfiles'
 alias psgrep='ps aux | grep -v grep | grep -i '
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 #mkdir, cd into it
 mkcd () {

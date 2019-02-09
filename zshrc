@@ -36,6 +36,7 @@ source ~/dotfiles/antigen.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 source ~/.profile
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 antigen use oh-my-zsh
 antigen bundle zdharma/fast-syntax-highlighting

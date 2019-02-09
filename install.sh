@@ -54,7 +54,6 @@ echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 
 apps=(
-    astro
     dashlane
     github
     gpg-suite

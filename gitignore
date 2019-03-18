@@ -42,3 +42,5 @@ thumbs.db
 .vs/*
 .vscode/*
 jsconfig.json
+.local-ci
+local-ci.log

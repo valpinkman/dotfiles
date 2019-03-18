@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-toOpen=$(fzf --height 15)
-if [ "$toOpen" = "" ]; then
-  exit
-fi
-code $toOpen

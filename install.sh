@@ -43,8 +43,6 @@ brew install python
 brew install python@2
 brew install pipenv
 brew install yarn
-brew install fzf
-brew install ripgrep
 
 echo "Cleaning up brew"
 brew cleanup
@@ -63,6 +61,7 @@ apps=(
     kid3
     now
     postman
+    insomnia
     setapp
     spectacle
     station

@@ -54,7 +54,7 @@ apps=(
     dashlane
     github
     gpg-suite
-    google-chrome
+    brave-browser
     iterm2
     keybase
     kid3

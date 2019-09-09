@@ -55,6 +55,9 @@ apps=(
     github
     gpg-suite
     brave-browser
+    steam
+    discord
+    webtorrent
     iterm2
     keybase
     kid3

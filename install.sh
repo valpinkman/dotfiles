@@ -58,6 +58,7 @@ apps=(
     steam
     discord
     webtorrent
+    iina
     iterm2
     keybase
     kid3

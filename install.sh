@@ -44,6 +44,7 @@ brew install yarn
 brew install wget
 brew install rbenv
 brew install zsh
+brew install zsh-history-substring-search
 
 echo "Cleaning up brew"
 brew cleanup

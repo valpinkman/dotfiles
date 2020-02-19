@@ -40,6 +40,11 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zdharma/fast-syntax-highlighting
 antigen apply
 
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 unsetopt correct_all
 setopt correct
 

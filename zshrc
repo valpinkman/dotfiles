@@ -1,4 +1,3 @@
-# ZSH_THEME=""
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -15,31 +14,44 @@ PATH=$PATH:/bin
 
 export PATH
 export JOBS=max
-export NVM_DIR=~/.nvm
-export ZSH=$HOME/.oh-my-zsh
+export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-[ -s "$HOME/nvm.sh" ] && . "$HOME/nvm.sh"  # This loads nvm
-
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(rbenv init -)"
+eval "$(starship init zsh)"
+
 source ~/dotfiles/antigen.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 source ~/.profile
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/history.zsh
 
-antigen use oh-my-zsh
-antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle unixorn/autoupdate-antigen.zshplugin
-antigen bundle paulirish/git-open
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zdharma/fast-syntax-highlighting
 antigen apply
 
 unsetopt correct_all
 setopt correct
+
+autoload -Uz compinit
+
+# Cache completion if nothing changed - faster startup time
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+
+# Enhanced form of menu completion called `menu selection'
+zmodload -i zsh/complist

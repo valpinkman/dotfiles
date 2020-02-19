@@ -9,12 +9,12 @@ ssh=~/.ssh                        # ssh directory
 bin=~/.bin                        # user bin directory
 files="bash_aliases bash_profile gemrc gitconfig gitignore profile vimrc zshrc"    # list of files/folders to symlink in homedir
 
-echo "Installing antigen"
-curl -L git.io/antigen > $dir/antigen.zsh
-echo "done"
-
 echo "Installing xcode-stuff"
 xcode-select --install
+echo "done"
+
+echo "Installing antigen"
+curl -L git.io/antigen > $dir/antigen.zsh
 echo "done"
 
 if test ! $(which brew); then
@@ -31,8 +31,7 @@ echo "Installing Git..."
 brew install git
 
 echo "Installing brew git utilities..."
-brew install git-extras
-brew install legit
+brew install github/gh/gh
 brew install hub
 brew install tig
 
@@ -42,6 +41,9 @@ brew install python
 brew install python@2
 brew install pipenv
 brew install yarn
+brew install wget
+brew install rbenv
+brew install zsh
 
 echo "Cleaning up brew"
 brew cleanup
@@ -54,11 +56,7 @@ apps=(
     dashlane
     github
     gpg-suite
-    brave-browser
-    steam
-    discord
-    webtorrent
-    iina
+    google-chrome
     iterm2
     keybase
     kid3
@@ -119,6 +117,18 @@ echo "done"
 echo "Linking ssh config"
 ln -s $dir/config $ssh/config
 echo "done"
+
+echo "Linking starship complete"
+mkdir -p ~/.config
+ln -s $dir/starship.toml ~/.config/starship.toml
+echo "done"
+
+echo "Installing zsh completions"
+mkdir -p ~/.zsh
+cd ~/.zsh
+wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/completion.zsh
+wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/history.zsh
+echo "Done"
 
 echo "Creating $bin if it doesn't exist already"
 mkdir -p $bin

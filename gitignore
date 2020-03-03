@@ -44,3 +44,5 @@ thumbs.db
 jsconfig.json
 .local-ci
 local-ci.log
+
+.yalc/

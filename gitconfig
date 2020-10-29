@@ -73,7 +73,7 @@
 [fetch]
   recurseSubmodules = on-demand
 [pull]
-  #rebase = true      	# Ne pas décommenter, préférer l'alias 'git up' qui fait un 'git pull --rebase",
+  rebase = false      	# Ne pas décommenter, préférer l'alias 'git up' qui fait un 'git pull --rebase",
                         # et garder la commande 'git pull' par défaut pour les situations sans rebase (merge par exemple)
 [push]
   default = upstream

@@ -27,6 +27,9 @@ fi
 echo "Updating homebrew..."
 brew update
 
+echo "Tapping Casks"
+brew tap homebrew/cask-fonts
+
 echo "Installing Git..."
 brew install git
 
@@ -43,6 +46,7 @@ brew install pipenv
 brew install yarn
 brew install wget
 brew install rbenv
+brew install starship
 brew install zsh
 brew install zsh-history-substring-search
 
@@ -68,6 +72,7 @@ apps=(
     spectacle
     station
     visual-studio-code
+    font-jetbrainsmono-nerd-font
     vox
     vox-preferences-pane
     qlcolorcode

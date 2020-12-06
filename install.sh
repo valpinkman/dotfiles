@@ -26,72 +26,18 @@ fi
 # Update homebrew recipes
 echo "Updating homebrew..."
 brew update
+echo "done"
 
-echo "Tapping Casks"
-brew tap homebrew/cask-fonts
+echo "Installing Brewfile..."
+brew bundle
+echo "done"
 
-echo "Installing Git..."
-brew install git
-
-echo "Installing brew git utilities..."
-brew install github/gh/gh
-brew install hub
-brew install tig
-
-echo "Installing other brew stuff..."
-brew install nvm
-brew install python
-brew install python@2
-brew install pipenv
-brew install yarn
-brew install wget
-brew install rbenv
-brew install starship
-brew install zsh
-brew install zsh-history-substring-search
-
-echo "Cleaning up brew"
+echo "Cleaning up..."
 brew cleanup
 echo "done"
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
-
-apps=(
-    dashlane
-    github
-    gpg-suite
-    google-chrome
-    iterm2
-    keybase
-    kid3
-    now
-    postman
-    insomnia
-    setapp
-    spectacle
-    station
-    visual-studio-code
-    font-jetbrainsmono-nerd-font
-    vox
-    vox-preferences-pane
-    qlcolorcode
-    qlimagesize
-    qlmarkdown
-    qlprettypatch
-    qlstephen
-    qlvideo
-    quicklook-csv
-    quicklook-json
-    suspicious-package
-    webpquicklook
-)
-
-echo "installing apps with Cask..."
-brew cask install ${apps[@]}
-
-brew cask cleanup
-brew cleanup
 echo "done"
 
 # create dotfiles_old in homedir

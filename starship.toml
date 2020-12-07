@@ -4,7 +4,8 @@
 # symbol = "λ"
 # symbol = "" # lightning symbol
 # symbol = "" # flask symbol
-symbol = "" # chilli symbol
+success_symbol = "(bold green)" # chilli symbol
+error_symbol = "(bold red)"
 # symbol = "" # serynge symbol
 
 [nodejs]

@@ -1,13 +1,10 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
 # valpinkman Account
 Host github.com
   HostName github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_rsa
-
-# vault config
-Host hsm-val
- ServerAliveInterval 300
- ServerAliveCountMax 2
- HostName beta.vault.ledger.fr
- User valpinkman
- LocalForward 11111 127.0.0.1:11111

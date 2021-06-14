@@ -37,6 +37,7 @@ cask "iina"
 cask "iterm2"
 cask "keybase"
 cask "kindle-comic-creator"
+cask "notion"
 cask "now"
 cask "postman"
 cask "pocket-casts"
@@ -61,3 +62,5 @@ mas "Bear", id: 1091189122
 mas "NordVPN IKE", id: 1116599239
 mas "Xcode", id: 497799835
 mas "Shazam", id: 897118787
+mas "Spaces", id: 1509611686
+mas "Craft", id: 1487937127

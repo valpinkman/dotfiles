@@ -106,3 +106,5 @@
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
+[hub]
+	protocol = ssh

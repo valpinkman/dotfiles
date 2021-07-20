@@ -1,12 +1,13 @@
 # https://www.nerdfonts.com/cheat-sheet
 
 [character]
-# symbol = "λ"
-# symbol = "" # lightning symbol
-# symbol = "" # flask symbol
-success_symbol = "(bold green)" # chilli symbol
-error_symbol = "(bold red)"
-# symbol = "" # serynge symbol
+# symbol = "[λ]"
+# symbol = "[]" # lightning symbol
+# symbol = "[]" # flask symbol
+# symbol = "[]" # serynge symbol
+# symbol = "[]" # chilli symbol
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
 
 [nodejs]
 # symbol = " "

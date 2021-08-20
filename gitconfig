@@ -108,3 +108,5 @@
   smudge = git-lfs smudge -- %f
 [hub]
 	protocol = ssh
+[init]
+	defaultBranch = main

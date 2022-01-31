@@ -4,21 +4,10 @@ COMPLETION_WAITING_DOTS="true"
 EDITOR="code"
 
 # User configuration
-PATH=$PATH
-PATH=$PATH:/usr/local/sbin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/sbin
-PATH=$PATH:/usr/bin
-PATH=$PATH:/sbin
-PATH=$PATH:/bin
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH
 export JOBS=max
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
+export VOLTA_HOME="$HOME/.volta"
 export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -27,11 +16,26 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
 
+PATH=$PATH
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/bin
+PATH=$PATH:$ANDROID_HOME/emulator
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$VOLTA_HOME/bin:$PATH
+
+export PATH
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"

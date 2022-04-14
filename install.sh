@@ -32,9 +32,9 @@ echo "Cleaning up..."
 brew cleanup
 echo "done"
 
-echo "Setting ZSH as shell..."
-chsh -s /bin/zsh
-echo "done"
+# echo "Setting ZSH as shell..."
+# chsh -s /bin/zsh
+# echo "done"
 
 echo "Downloading Volta"
 curl https://get.volta.sh | bash

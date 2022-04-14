@@ -1,4 +1,3 @@
-
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
@@ -21,7 +20,6 @@ brew "zsh-history-substring-search"
 
 brew "mas"
 
-cask "adoptopenjdk/openjdk/adoptopenjdk8"
 cask "8bitdo-firmware-updater"
 cask "8bitdo-ultimate-software"
 cask "brave-browser"
@@ -53,15 +51,16 @@ cask "visual-studio-code"
 cask "vox"
 cask "vox-preferences-pane"
 cask "webtorrent"
+cask "zulu11"
 
-cask "qlimagesize"
-cask "qlprettypatch"
-cask "qlstephen"
-cask "qlvideo"
-cask "quicklook-csv"
-cask "quicklook-json"
-cask "suspicious-package"
-cask "webpquicklook"
+# cask "qlimagesize"
+# cask "qlprettypatch"
+# cask "qlstephen"
+# cask "qlvideo"
+# cask "quicklook-csv"
+# cask "quicklook-json"
+# cask "suspicious-package"
+# cask "webpquicklook"
 
 mas "Bear", id: 1091189122
 mas "NordVPN IKE", id: 1116599239

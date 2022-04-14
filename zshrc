@@ -41,6 +41,7 @@ export SSH_KEY_PATH="~/.ssh/"
 
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
+# eval $(minikube -p minikube docker-env)
 
 autoload -Uz compinit
 

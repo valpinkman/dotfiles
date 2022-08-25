@@ -40,6 +40,10 @@ echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 echo "done"
 
+echo "Downloading Volta"
+curl https://get.volta.sh | bash
+echo "done"
+
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir

@@ -1,4 +1,3 @@
-antigen.zsh
 *.log
 .DS_Store
 .vscode

@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -53,17 +55,11 @@ fi
 # Enhanced form of menu completion called `menu selection'
 zmodload -i zsh/complist
 
-source ~/dotfiles/antigen.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 source ~/.profile
 source ~/.zsh/completion.zsh
 source ~/.zsh/history.zsh
-
-antigen bundle unixorn/autoupdate-antigen.zshplugin
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zdharma/fast-syntax-highlighting
-antigen apply
 
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -72,3 +68,6 @@ bindkey '^[[B' history-substring-search-down
 
 unsetopt correct_all
 setopt correct
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

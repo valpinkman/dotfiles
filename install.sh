@@ -19,6 +19,8 @@ if test ! $(which brew); then
   echo "done"
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Update homebrew recipes
 echo "Updating homebrew..."
 brew update
@@ -35,10 +37,6 @@ echo "done"
 # echo "Setting ZSH as shell..."
 # chsh -s /bin/zsh
 # echo "done"
-
-echo "Downloading Volta"
-curl https://get.volta.sh | bash
-echo "done"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

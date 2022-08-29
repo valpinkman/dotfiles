@@ -8,12 +8,10 @@ EDITOR="code"
 # User configuration
 
 export JOBS=max
-# export NVM_DIR="$HOME/.nvm"
-export VOLTA_HOME="$HOME/.volta"
 export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home`
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
@@ -36,12 +34,9 @@ export PATH
 # ssh
 export SSH_KEY_PATH="~/.ssh/"
 
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
-# eval $(minikube -p minikube docker-env)
 
 autoload -Uz compinit
 
@@ -62,7 +57,7 @@ source ~/.profile
 source ~/.zsh/completion.zsh
 source ~/.zsh/history.zsh
 
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down

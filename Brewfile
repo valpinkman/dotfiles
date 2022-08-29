@@ -9,6 +9,7 @@ brew "gh"
 brew "tig"
 
 brew "python"
+brew  "fnm"
 brew "pipenv"
 brew "wget"
 brew "rbenv"

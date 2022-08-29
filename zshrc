@@ -37,6 +37,7 @@ export SSH_KEY_PATH="~/.ssh/"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 autoload -Uz compinit
 

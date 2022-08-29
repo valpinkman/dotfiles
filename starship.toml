@@ -10,4 +10,15 @@ success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
 
 [nodejs]
-# symbol = " "
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+
+[battery]
+charging_symbol = " "
+
+[[battery.display]]
+threshold = 20
+style = "bold red"

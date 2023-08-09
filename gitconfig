@@ -25,8 +25,8 @@
   added = yellow
   changed = green
   untracked = cyan
-# [credential]
-#   helper = osxkeychain
+[credential]
+  helper = osxkeychain
 [alias]
   st = status
   ci = commit

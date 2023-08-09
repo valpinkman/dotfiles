@@ -3,11 +3,12 @@
 # install.sh
 ############################
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+dir=~/dotfiles                     # dotfiles directory
+olddir=~/dotfiles_old              # old dotfiles backup directory
 ssh=~/.ssh                        # ssh directory
 bin=~/.bin                        # user bin directory
-files="bash_aliases bash_profile gemrc gitconfig gitignore profile vimrc zshrc"    # list of files/folders to symlink in homedir
+fish=~/.config/fish
+files="gemrc gitconfig gitignore vimrc"    # list of files/folders to symlink in homedir
 
 echo "Installing xcode-stuff"
 xcode-select --install
@@ -34,9 +35,13 @@ echo "Cleaning up..."
 brew cleanup
 echo "done"
 
-echo "Setting ZSH as shell..."
-chsh -s /bin/zsh
+echo "Setting Fish as shell..."
+echo $(which fish) | sudo tee -a /etc/shells
+chsh -s $(which fish)
+fish
 echo "done"
+
+set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -68,17 +73,25 @@ echo "Linking ssh config"
 ln -s $dir/config $ssh/config
 echo "done"
 
+echo "Moving existing .config/fish to $olddir"
+mv $fish $olddir/fish
+echo "done"
+
+echo "Linking fish config"
+ln -s $dir/fish $fish
+echo "done"
+
 echo "Linking starship complete"
 mkdir -p ~/.config
 ln -s $dir/starship.toml ~/.config/starship.toml
 echo "done"
 
-echo "Installing zsh completions"
-mkdir -p ~/.zsh
-cd ~/.zsh
-wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/completion.zsh
-wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/history.zsh
-echo "Done"
+# echo "Installing zsh completions"
+# mkdir -p ~/.zsh
+# cd ~/.zsh
+# wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/completion.zsh
+# wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/history.zsh
+# echo "Done"
 
 echo "Creating $bin if it doesn't exist already"
 mkdir -p $bin

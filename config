@@ -20,3 +20,7 @@ Host bastion.aws.prd.ldg-tech.com
     User vpinkman
     StrictHostKeyChecking no
     IdentityFile ~/.ssh/id_ed25519
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

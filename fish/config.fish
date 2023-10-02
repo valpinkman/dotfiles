@@ -47,7 +47,7 @@ rbenv init - fish | source
 # fnm env --use-on-cd | source
 starship init fish | source
 
-# proto
+# # proto
 set -gx PROTO_ROOT "$HOME/.proto"
 set -gx PATH "$PROTO_ROOT/bin" $PATH
 

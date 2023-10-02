@@ -1,6 +1,5 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 # tap "homebrew/bundle"
 # tap "homebrew/core"
@@ -60,7 +59,7 @@ cask "zulu11"
 # cask "webpquicklook"
 
 mas "Bear", id: 1091189122
-mas "Xcode", id: 497799835
-mas "Shazam", id: 897118787
+# mas "Xcode", id: 497799835
+# mas "Shazam", id: 897118787
 # mas "Spaces", id: 1509611686
 # mas "Craft", id: 1487937127

@@ -1,5 +1,8 @@
 # https://www.nerdfonts.com/cheat-sheet
 
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = false
 
 # format = """
@@ -47,7 +50,7 @@ format = """\
     $character\
 """
 
-command_timeout = 1000
+command_timeout = 1500
 
 [shell]
 fish_indicator = '󰈺'
